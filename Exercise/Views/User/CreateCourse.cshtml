@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateCourse</title>
+
+    <script src="~/Scripts/Validations.js"></script>
+
+</head>
+<body>
+    <div>
+        <form action="/User/SaveCourse" method="post">
+            Course Title: <input type="text" id="courseTitle" name="Title" value="" /><br />
+            Result: <input type="text" id="result" name="Result" value="" /><br />
+            <input type="submit" id="btnAdd" name="BtnSubmit" value="Save" onclick="return isValid();" />
+
+            <input type="submit" name="BtnSubmit" value="Cancel" />
+        </form>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+
+</body>
+</html>

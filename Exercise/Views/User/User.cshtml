@@ -1,0 +1,40 @@
+﻿@using Exercise.ViewModels
+@model UserCourseListViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>User</title>
+</head>
+<body>
+    <div>
+        @foreach (UserViewModel user in Model.Users)
+        {
+            <div>Name: @user.Name</div>
+            <div>Age: @user.Age</div>
+            <div>University: @user.University</div>
+        }
+    </div>
+
+    <a href="/User/CreateCourse">Create Course</a>
+    <table border="1">
+        <tr>
+            <th>Course Title</th>
+            <th>Result</th>
+        </tr>
+        @foreach (CourseViewModel course in Model.Courses)
+        {
+            <tr>
+                <td>@course.title</td>
+                <td style="background-color:@course.resultColor">@course.result</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
